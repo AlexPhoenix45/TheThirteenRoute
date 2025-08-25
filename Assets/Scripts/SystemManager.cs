@@ -13,6 +13,7 @@ public class SystemManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         
         DataManager.LoadData(DataType.GAMEDATA);
@@ -21,7 +22,7 @@ public class SystemManager : MonoBehaviour
 
     private void Start()
     {
-        ChangeStatus(Status.HOME);
+        ChangeStatus(SystemStatus.HOME);
     }
 
     private void Update()
@@ -29,17 +30,17 @@ public class SystemManager : MonoBehaviour
         currentGameMode.Update();
     }
 
-    public static void ChangeStatus(Status status)
+    public static void ChangeStatus(SystemStatus systemStatus)
     {
-        switch (status)
+        switch (systemStatus)
         {
-            case Status.HOME:
+            case SystemStatus.HOME:
             {
                 Instance.currentGameMode = new Home();
                 Instance.currentGameMode.Start();
                 break;
             }
-            case Status.INGAME:
+            case SystemStatus.INGAME:
             {
                 Instance.currentGameMode = new Ingame();
                 Instance.currentGameMode.Start();

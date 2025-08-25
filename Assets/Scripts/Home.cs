@@ -2,16 +2,32 @@ using UnityEngine;
 
 public class Home : GameMode
 {
+    public enum HomeStatus
+    {
+        INIT,
+        IN,
+    }   
+    private HomeStatus status;
+    
     public override void Start()
     {
-        Debug.Log("Home Mode - Start");
+        status = HomeStatus.INIT;
     }
 
     public override void Update()
     {
-        Debug.Log("Home Mode - Update" + DataManager.gameData.number);
-        DataManager.gameData.number = 1;
-        DataManager.SaveData(DataType.GAMEDATA);
-        SystemManager.ChangeStatus(Status.INGAME);
+        switch (status)
+        {
+            case HomeStatus.INIT:
+            {
+                HomeUIManager.In();
+                status = HomeStatus.IN;
+                break;
+            }
+            case HomeStatus.IN:
+            {
+                break;
+            }
+        }
     }
 }

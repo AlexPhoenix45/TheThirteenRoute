@@ -8,7 +8,7 @@ public class GameData
 }
 
 [Serializable]
-public enum Status
+public enum SystemStatus
 {
     HOME,
     INGAME,
