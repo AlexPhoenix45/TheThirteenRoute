@@ -5,6 +5,7 @@ using UnityEngine;
 public class SystemManager : MonoBehaviour
 {
     public static SystemManager Instance;
+    public static bool excludeButton = false;
     
     private GameMode currentGameMode;
 
@@ -27,6 +28,10 @@ public class SystemManager : MonoBehaviour
 
     private void Update()
     {
+#if GAME_DEBUG
+        DebugUIManager.AddDebugText("currentGameMode", currentGameMode.ToString());
+#endif
+        
         currentGameMode.Update();
     }
 

@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 6211342502303868900}
   settingButton: {fileID: 528931656772892654}
+  anim: {fileID: 3618274035207352837}
 --- !u!95 &3618274035207352837
 Animator:
   serializedVersion: 7
@@ -88,6 +89,7 @@ GameObject:
   - component: {fileID: 887069112033463085}
   - component: {fileID: 6677818420147105807}
   - component: {fileID: 528931656772892654}
+  - component: {fileID: 1414469703537609740}
   m_Layer: 5
   m_Name: SettingButton
   m_TagString: Untagged
@@ -197,6 +199,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &1414469703537609740
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298847686115641773}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2880117089472813571
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +297,7 @@ GameObject:
   - component: {fileID: 4496353194225145906}
   - component: {fileID: 8145214781831411771}
   - component: {fileID: 6211342502303868900}
+  - component: {fileID: 2490146659550324994}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -307,8 +322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -247.5}
-  m_SizeDelta: {x: 381.0936, y: 30}
+  m_AnchoredPosition: {x: 0, y: -215.4}
+  m_SizeDelta: {x: 188.1684, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8145214781831411771
 CanvasRenderer:
@@ -362,6 +377,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &2490146659550324994
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657381998356136865}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3905272953431355642
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press to start
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd5cbb7595d89b94aacd1fa060119de6, type: 2}
   m_sharedMaterial: {fileID: 1665456172564652890, guid: fd5cbb7595d89b94aacd1fa060119de6, type: 2}
