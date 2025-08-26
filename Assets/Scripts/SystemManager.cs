@@ -7,6 +7,13 @@ public class SystemManager : MonoBehaviour
     public static SystemManager Instance;
     public static bool excludeButton = false;
     
+    [Serializable]
+    public enum SystemStatus
+    {
+        HOME,
+        INGAME,
+    }
+    
     private GameMode currentGameMode;
 
     private void Awake()

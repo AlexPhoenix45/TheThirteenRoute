@@ -30,6 +30,7 @@ public class Home : GameMode
             case HomeStatus.INITIALIZE:
             {
                 FadeUIManager.FadeIn(Color.black, 1);
+                SoundManager.PlayBGM(SoundManager.BGM.MAINMENU);
                 
                 status = HomeStatus.FADEIN;
                 

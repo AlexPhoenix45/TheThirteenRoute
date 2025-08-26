@@ -4,12 +4,6 @@ using UnityEngine;
 [Serializable]
 public class GameData
 {
-    public int number = 0;
-}
-
-[Serializable]
-public enum SystemStatus
-{
-    HOME,
-    INGAME,
+    public float seVolume = 1;
+    public float bgmVolume = 1;
 }

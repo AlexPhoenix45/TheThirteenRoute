@@ -57,6 +57,7 @@ public class HomeUIManager : MonoBehaviour
             return;
         }
         SystemManager.excludeButton = true;
+        SoundManager.PlaySE(SoundManager.SE.BUTTONCLICK);
         
         Debug.Log("OnClick_PlayButton");
 
@@ -70,6 +71,7 @@ public class HomeUIManager : MonoBehaviour
             return;
         }
         SystemManager.excludeButton = true;
+        SoundManager.PlaySE(SoundManager.SE.BUTTONCLICK);
 
         Debug.Log("OnClick_SettingButton");
         
